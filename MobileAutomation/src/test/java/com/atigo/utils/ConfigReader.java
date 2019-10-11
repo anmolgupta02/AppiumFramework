@@ -20,4 +20,8 @@ public class ConfigReader {
 	public String getMobNum() {
 		return prop.getProperty("mobNum");
 	}
+
+	public String getHeaderText() {
+		return prop.getProperty("headerText");
+	}
 }

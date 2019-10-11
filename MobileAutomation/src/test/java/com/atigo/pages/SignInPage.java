@@ -2,9 +2,7 @@ package com.atigo.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-
 import com.atigo.utils.DriverClass;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -27,6 +25,9 @@ public class SignInPage extends DriverClass {
 	@AndroidFindBy(id = "com.android.atigo:id/verify_phone_next_tv")
 	private WebElement otpButton;
 
+	@AndroidFindBy(id = "")  //Enter id
+	private WebElement headerTextHolder;
+	
 	public WebElement getPhoneNumberSignin() {
 		return phoneNumberSignin;
 	}
@@ -41,6 +42,11 @@ public class SignInPage extends DriverClass {
 
 	public WebElement getOtpButton() {
 		return otpButton;
+	}
+
+	public WebElement getHeader() {
+		
+		return headerTextHolder;
 	}
 
 }

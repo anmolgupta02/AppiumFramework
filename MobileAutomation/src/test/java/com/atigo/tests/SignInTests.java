@@ -19,6 +19,11 @@ public class SignInTests {
 			System.err.print(e);
 		}
 
+		if (logic.verifyLogin()) {
+			System.out.println("Case Passed");
+		} else
+			System.out.println("Case Failed");
+
 	}
 
 }

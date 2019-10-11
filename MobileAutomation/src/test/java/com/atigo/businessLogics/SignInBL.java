@@ -19,5 +19,11 @@ public class SignInBL extends DriverClass {
 		mb.typeOnElement(pageObject.getNumberField(), reader.getMobNum());
 		mb.clickOnElement(pageObject.getOtpButton());
 	}
+	
+	public boolean verifyLogin() {
+		String actual = mb.getText(pageObject.getHeader());
+		boolean flag = mb.CompareText(actual, reader.getHeaderText());
+		return flag;
+	}
 
 }
