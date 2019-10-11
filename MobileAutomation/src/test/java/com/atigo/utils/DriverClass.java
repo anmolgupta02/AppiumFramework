@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
-public class startDriver {
+public class DriverClass {
 	
 	public static AppiumDriver<WebElement> adriver;
 	

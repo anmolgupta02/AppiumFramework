@@ -1,20 +1,23 @@
 package com.atigo.businessLogics;
 
-
 import com.atigo.pages.SignInPage;
+import com.atigo.utils.ConfigReader;
+import com.atigo.utils.DriverClass;
 import com.atigo.utils.MethodBank;
-import com.atigo.utils.startDriver;
 
+public class SignInBL extends DriverClass {
 
-public class SignInBL extends startDriver{
-	
-	SignInPage pageObject =  new SignInPage(adriver);
+	SignInPage pageObject = new SignInPage(adriver);
 	MethodBank mb;
-	public void SingInWithPhone() {
+	ConfigReader reader;
+
+	public void SingInWithPhone() throws Exception{
+		mb = new MethodBank();
+		reader = new ConfigReader();
+		mb.clickOnElement(pageObject.getPhoneNumberSignin());
 		mb.clickOnElement(pageObject.getNumberField());
-		mb.clickOnElement(pageObject.getNumberField());
-		mb.typeOnElement(pageObject.getNumberField(),"8860016031");
-		
+		mb.typeOnElement(pageObject.getNumberField(), reader.getMobNum());
+		mb.clickOnElement(pageObject.getOtpButton());
 	}
 
 }

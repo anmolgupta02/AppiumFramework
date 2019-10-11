@@ -3,13 +3,13 @@ package com.atigo.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import com.atigo.utils.startDriver;
+import com.atigo.utils.DriverClass;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class SignInPage extends startDriver {
+public class SignInPage extends DriverClass {
 	
 	public SignInPage(AppiumDriver<WebElement> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(adriver), this);
