@@ -9,7 +9,7 @@ public class ConfigReader {
 	Properties prop;
 
 	public ConfigReader() throws Exception {
-		String filepath = System.getProperty("user.dir") + "/conif.properties";
+		String filepath = System.getProperty("user.dir") + "/config.properties";
 		File file = new File(filepath);
 		FileInputStream fis = new FileInputStream(file);
 		prop = new Properties();

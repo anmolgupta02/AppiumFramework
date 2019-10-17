@@ -11,9 +11,19 @@ public class SignInPage extends DriverClass {
 	
 	public SignInPage(AppiumDriver<WebElement> driver) {
 		PageFactory.initElements(new AppiumFieldDecorator(adriver), this);
+		DriverClass.adriver = driver;
 	}
 	
-	@AndroidFindBy(id = "com.android.atigo:id/SignIn_txt")
+	
+	@AndroidFindBy(id="com.android.packageinstaller:id/permission_allow_button")
+	private WebElement allowPermission;
+	
+	public WebElement getAllowPermission() {
+		return allowPermission;
+	}
+
+
+	@AndroidFindBy(id = "com.android.atigo:id/SignIn_PhoneLin")
 	private WebElement phoneNumberSignin;
 	
 	@AndroidFindBy(id = "com.android.atigo:id/SignIn_Phone")
@@ -25,7 +35,7 @@ public class SignInPage extends DriverClass {
 	@AndroidFindBy(id = "com.android.atigo:id/verify_phone_next_tv")
 	private WebElement otpButton;
 
-	@AndroidFindBy(id = "")  //Enter id
+	@AndroidFindBy(id = "com.android.atigo:id/SelectedfragmentTitle")  //Enter id
 	private WebElement headerTextHolder;
 	
 	public WebElement getPhoneNumberSignin() {
