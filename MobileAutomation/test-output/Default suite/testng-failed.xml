@@ -6,6 +6,8 @@
       <class name="com.atigo.tests.SignInTests">
         <methods>
           <include name="TestingWithValidCredentials"/>
+          <include name="Teardown"/>
+          <include name="Start"/>
         </methods>
       </class> <!-- com.atigo.tests.SignInTests -->
     </classes>

@@ -2,21 +2,28 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="96" started-at="2019-10-11T18:56:47 IST" finished-at="2019-10-11T18:56:47 IST">
+  <suite name="Default suite" duration-ms="34460" started-at="2019-10-17T15:49:52 IST" finished-at="2019-10-17T15:50:26 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="96" started-at="2019-10-11T18:56:47 IST" finished-at="2019-10-11T18:56:47 IST">
+    <test name="Default test" duration-ms="34460" started-at="2019-10-17T15:49:52 IST" finished-at="2019-10-17T15:50:26 IST">
       <class name="com.atigo.tests.SignInTests">
-        <test-method status="FAIL" signature="TestingWithValidCredentials()[pri:0, instance:com.atigo.tests.SignInTests@71423665]" name="TestingWithValidCredentials" duration-ms="42" started-at="2019-10-11T18:56:47 IST" finished-at="2019-10-11T18:56:47 IST">
-          <exception class="java.lang.NoClassDefFoundError">
+        <test-method status="PASS" signature="Start()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="Start" is-config="true" duration-ms="13916" started-at="2019-10-17T15:49:38 IST" finished-at="2019-10-17T15:49:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Start -->
+        <test-method status="FAIL" signature="TestingWithValidCredentials()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="TestingWithValidCredentials" duration-ms="34385" started-at="2019-10-17T15:49:52 IST" finished-at="2019-10-17T15:50:26 IST">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[net/sf/cglib/proxy/MethodInterceptor]]>
+              <![CDATA[Can't locate an element by this strategy: By.chained({By.id: com.android.atigo:id/SelectedfragmentTitle})]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: net/sf/cglib/proxy/MethodInterceptor
-at com.atigo.pages.SignInPage.<init>(SignInPage.java:13)
-at com.atigo.businessLogics.SignInBL.<init>(SignInBL.java:10)
-at com.atigo.tests.SignInTests.TestingWithValidCredentials(SignInTests.java:14)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: com.android.atigo:id/SelectedfragmentTitle})
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$43768359.getText(<generated>)
+at com.atigo.utils.MethodBank.getText(MethodBank.java:16)
+at com.atigo.businessLogics.SignInBL.verifyLogin(SignInBL.java:31)
+at com.atigo.tests.SignInTests.TestingWithValidCredentials(SignInTests.java:23)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -45,18 +52,95 @@ at org.testng.TestNG.run(TestNG.java:1000)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.ClassNotFoundException: net.sf.cglib.proxy.MethodInterceptor
-at java.net.URLClassLoader.findClass(Unknown Source)
-at java.lang.ClassLoader.loadClass(Unknown Source)
-at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-at java.lang.ClassLoader.loadClass(Unknown Source)
-... 31 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@51133c06 (tried for 1 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+... 33 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.id: com.android.atigo:id/SelectedfragmentTitle})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'C2C', ip: '10.1.1.225', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 35 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestingWithValidCredentials -->
+        <test-method status="FAIL" signature="Teardown()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="Teardown" is-config="true" duration-ms="8" started-at="2019-10-17T15:50:26 IST" finished-at="2019-10-17T15:50:26 IST">
+          <exception class="org.openqa.selenium.UnsupportedCommandException">
+            <message>
+              <![CDATA[Method has not yet been implemented
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'C2C', ip: '10.1.1.225', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, databaseEnabled: false, desired: {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, deviceName: emulator, platformName: android, platformVersion: 7.1.1, udid: emulator-5554}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 7.1.1, takesScreenshot: true, udid: emulator-5554, warnings: {}, webStorageEnabled: false}
+Session ID: 6e22f498-8651-4739-8e4d-34c370f5865b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnsupportedCommandException: Method has not yet been implemented
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'C2C', ip: '10.1.1.225', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, databaseEnabled: false, desired: {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, deviceName: emulator, platformName: android, platformVersion: 7.1.1, udid: emulator-5554}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 7.1.1, takesScreenshot: true, udid: emulator-5554, warnings: {}, webStorageEnabled: false}
+Session ID: 6e22f498-8651-4739-8e4d-34c370f5865b
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
+at com.atigo.utils.DriverClass.Teardown(DriverClass.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:369)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnsupportedCommandException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
       </class> <!-- com.atigo.tests.SignInTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
