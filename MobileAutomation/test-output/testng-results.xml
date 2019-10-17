@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34460" started-at="2019-10-17T15:49:52 IST" finished-at="2019-10-17T15:50:26 IST">
+  <suite name="Default suite" duration-ms="124970" started-at="2019-10-17T16:39:06 IST" finished-at="2019-10-17T16:41:11 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34460" started-at="2019-10-17T15:49:52 IST" finished-at="2019-10-17T15:50:26 IST">
+    <test name="Default test" duration-ms="124970" started-at="2019-10-17T16:39:06 IST" finished-at="2019-10-17T16:41:11 IST">
       <class name="com.atigo.tests.SignInTests">
-        <test-method status="PASS" signature="Start()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="Start" is-config="true" duration-ms="13916" started-at="2019-10-17T15:49:38 IST" finished-at="2019-10-17T15:49:52 IST">
+        <test-method status="PASS" signature="Start()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="Start" is-config="true" duration-ms="14491" started-at="2019-10-17T16:38:51 IST" finished-at="2019-10-17T16:39:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Start -->
-        <test-method status="FAIL" signature="TestingWithValidCredentials()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="TestingWithValidCredentials" duration-ms="34385" started-at="2019-10-17T15:49:52 IST" finished-at="2019-10-17T15:50:26 IST">
+        <test-method status="FAIL" signature="TestingWithValidCredentials()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="TestingWithValidCredentials" duration-ms="124895" started-at="2019-10-17T16:39:06 IST" finished-at="2019-10-17T16:41:11 IST">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Can't locate an element by this strategy: By.chained({By.id: com.android.atigo:id/SelectedfragmentTitle})]]>
@@ -20,10 +20,10 @@
               <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.id: com.android.atigo:id/SelectedfragmentTitle})
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:60)
-at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$43768359.getText(<generated>)
-at com.atigo.utils.MethodBank.getText(MethodBank.java:16)
-at com.atigo.businessLogics.SignInBL.verifyLogin(SignInBL.java:31)
-at com.atigo.tests.SignInTests.TestingWithValidCredentials(SignInTests.java:23)
+at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$15da9759.getText(<generated>)
+at com.atigo.utils.MethodBank.getText(MethodBank.java:21)
+at com.atigo.businessLogics.SignInBL.verifyLogin(SignInBL.java:28)
+at com.atigo.tests.SignInTests.TestingWithValidCredentials(SignInTests.java:25)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -52,7 +52,7 @@ at org.testng.TestNG.run(TestNG.java:1000)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@51133c06 (tried for 1 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@6f19ac19 (tried for 1 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
@@ -84,7 +84,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestingWithValidCredentials -->
-        <test-method status="FAIL" signature="Teardown()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="Teardown" is-config="true" duration-ms="8" started-at="2019-10-17T15:50:26 IST" finished-at="2019-10-17T15:50:26 IST">
+        <test-method status="FAIL" signature="Teardown()[pri:0, instance:com.atigo.tests.SignInTests@74650e52]" name="Teardown" is-config="true" duration-ms="9" started-at="2019-10-17T16:41:11 IST" finished-at="2019-10-17T16:41:11 IST">
           <exception class="org.openqa.selenium.UnsupportedCommandException">
             <message>
               <![CDATA[Method has not yet been implemented
@@ -92,7 +92,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25
 System info: host: 'C2C', ip: '10.1.1.225', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, databaseEnabled: false, desired: {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, deviceName: emulator, platformName: android, platformVersion: 7.1.1, udid: emulator-5554}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 7.1.1, takesScreenshot: true, udid: emulator-5554, warnings: {}, webStorageEnabled: false}
-Session ID: 6e22f498-8651-4739-8e4d-34c370f5865b]]>
+Session ID: 20c60f25-3195-4c1d-b367-e559008d7c23]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.UnsupportedCommandException: Method has not yet been implemented
@@ -100,7 +100,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25
 System info: host: 'C2C', ip: '10.1.1.225', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, databaseEnabled: false, desired: {appActivity: com.android.atigo.ui.splash..., appPackage: com.android.atigo, deviceName: emulator, platformName: android, platformVersion: 7.1.1, udid: emulator-5554}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 7.1.1, takesScreenshot: true, udid: emulator-5554, warnings: {}, webStorageEnabled: false}
-Session ID: 6e22f498-8651-4739-8e4d-34c370f5865b
+Session ID: 20c60f25-3195-4c1d-b367-e559008d7c23
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
