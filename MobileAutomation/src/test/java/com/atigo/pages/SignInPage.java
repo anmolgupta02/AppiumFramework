@@ -35,14 +35,14 @@ public class SignInPage extends DriverClass {
 	@AndroidFindBy(id = "com.android.atigo:id/verify_phone_next_tv")
 	private WebElement otpButton;
 	
-	@AndroidFindBy(xpath = "//android.widget.TextView[@index='4']")
+	@AndroidFindBy(xpath = "//*[@text='Submit']")
 	private WebElement verifyOTP;
 
 	public WebElement getVerifyOTP() {
 		return verifyOTP;
 	}
-
-
+	
+	
 	@AndroidFindBy(id = "com.android.atigo:id/SelectedfragmentTitle")  //Enter id
 	private WebElement headerTextHolder;
 	

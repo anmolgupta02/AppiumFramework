@@ -20,7 +20,7 @@ public class SignInBL extends DriverClass {
 		System.out.println("Please Enter the OTP manually");
 		Thread.sleep(15000);
 		System.out.println("Hope you have entered the OTP by now");
-		mb.pressByElement(pageObject.getVerifyOTP());
+		mb.clickOnElement(pageObject.getVerifyOTP());
 	}
 	
 	public boolean verifyLogin() throws Exception {
@@ -31,3 +31,4 @@ public class SignInBL extends DriverClass {
 	}
 
 }
+   
