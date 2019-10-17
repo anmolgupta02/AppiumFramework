@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.atigo.businessLogics.SignInBL;
 import com.atigo.utils.DriverClass;
+import com.atigo.utils.MethodBank;
 
 public class SignInTests extends DriverClass {
 
@@ -13,10 +14,11 @@ public class SignInTests extends DriverClass {
 	public void TestingWithValidCredentials() throws Exception {
 
 		logic = new SignInBL();
-		
-		logic.AcceptPermission();
-		logic.AcceptPermission();
-		
+		MethodBank mb = new MethodBank();
+
+		for (int i = 0; i < 2; i++)
+			mb.acceptPermission();
+
 		Thread.sleep(5000);
 		logic.SingInWithPhone();
 

@@ -11,19 +11,16 @@ public class SignInBL extends DriverClass {
 	MethodBank mb = new MethodBank();
 	ConfigReader reader;
 	
-	
-	public void AcceptPermission() {
-		
-		mb.clickOnElement(pageObject.getAllowPermission());
-	}
-	
-	
 	public void SingInWithPhone() throws Exception{
 		reader = new ConfigReader();
 		mb.clickOnElement(pageObject.getPhoneNumberSignin());
 		mb.clickOnElement(pageObject.getNumberField());
 		mb.typeOnElement(pageObject.getNumberField(), reader.getMobNum());
 		mb.clickOnElement(pageObject.getOtpButton());
+		System.out.println("Please Enter the OTP manually");
+		Thread.sleep(15000);
+		System.out.println("Hope you have entered the OTP by now");
+		mb.pressByElement(pageObject.getVerifyOTP());
 	}
 	
 	public boolean verifyLogin() throws Exception {
