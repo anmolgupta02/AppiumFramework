@@ -24,7 +24,7 @@ public class SignInPage extends DriverClass {
 
 
 	@AndroidFindBy(id = "com.android.atigo:id/SignIn_PhoneLin")
-	private WebElement phoneNumberSignin;
+	private WebElement phoneNumberSignin; 
 	
 	@AndroidFindBy(id = "com.android.atigo:id/SignIn_Phone")
 	private WebElement GoogleSignIn;
